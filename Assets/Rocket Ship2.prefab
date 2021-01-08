@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5428084048885755056}
   - component: {fileID: 888533686490234589}
   m_Layer: 0
-  m_Name: Cube(Clone)
+  m_Name: Booster1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -325,7 +325,7 @@ GameObject:
   - component: {fileID: 1831438058194262183}
   - component: {fileID: 1341815043676353299}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Booster0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9765,7 +9765,7 @@ GameObject:
   - component: {fileID: 742815148563297596}
   - component: {fileID: 8586931036348868107}
   m_Layer: 0
-  m_Name: Cube(Clone) (1)(Clone)
+  m_Name: Booster3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10299,7 +10299,7 @@ GameObject:
   - component: {fileID: 4864041320726524784}
   - component: {fileID: 1777576795456661511}
   m_Layer: 0
-  m_Name: Cube(Clone) (1)
+  m_Name: Booster2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
