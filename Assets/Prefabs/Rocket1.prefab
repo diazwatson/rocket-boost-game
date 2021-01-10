@@ -102,7 +102,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4256904256523269245}
-  - component: {fileID: 524721840}
   m_Layer: 0
   m_Name: RocketShipOld
   m_TagString: Untagged
@@ -128,18 +127,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &524721840
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4256904256523269244}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a911371293c1642df9d671e2b32a1718, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &4256904257388733226
 GameObject:
   m_ObjectHideFlags: 0
