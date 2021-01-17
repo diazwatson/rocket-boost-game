@@ -12,17 +12,20 @@ public class Rocket : MonoBehaviour
 
     State state = State.Alive;
 
-    [SerializeField]  float levelLoadDelay = 2.31f;
+    // Debug Mode
+    private bool isCollisionDisabled = false;
+
+    [SerializeField] float levelLoadDelay = 2.31f;
 
     // Rocket Thrust
     [SerializeField] float rcsThrust = 250f;
     [SerializeField] float mainThrust = 50f;
-    
+
     // Audio
     [SerializeField] AudioClip mainEngine;
     [SerializeField] AudioClip success;
-    [SerializeField] AudioClip death; 
-    
+    [SerializeField] AudioClip death;
+
     // Particles
     [SerializeField] ParticleSystem mainEngineParticles;
     [SerializeField] ParticleSystem successParticles;
@@ -46,11 +49,30 @@ public class Rocket : MonoBehaviour
             RespondToThrustInput();
             RespondToRotateInput();
         }
+
+        if (Debug.isDebugBuild)
+        {
+            RespondToDebugKeys();
+        }
+    }
+
+    private void RespondToDebugKeys()
+    {
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            LoadNextLevel();
+        }
+
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            isCollisionDisabled = !isCollisionDisabled; //toggle
+            print("Collision enabled: " + isCollisionDisabled);
+        }
     }
 
     void OnCollisionEnter(Collision collision)
     {
-        if (state != State.Alive)
+        if (state != State.Alive || !isCollisionDisabled)
         {
             return;
         }
@@ -71,21 +93,21 @@ public class Rocket : MonoBehaviour
     private void StartSuccessSequence()
     {
         state = State.Transcending;
-        
+
         successParticles.Play();
-        
+
         audioSource.Stop();
         audioSource.PlayOneShot(success);
-        
+
         Invoke(nameof(LoadNextLevel), levelLoadDelay);
     }
 
     private void StartDeathSequence()
     {
         state = State.Dying;
-        
+
         deathParticles.Play();
-        
+
         audioSource.Stop();
         audioSource.PlayOneShot(death);
         // Loads current level
@@ -107,6 +129,7 @@ public class Rocket : MonoBehaviour
     {
         rigidbody.freezeRotation = true; // Takes manual control of the rotation
         float rotationThisFrame = rcsThrust * Time.deltaTime;
+
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
             transform.Rotate(Vector3.forward * rotationThisFrame);
@@ -139,6 +162,7 @@ public class Rocket : MonoBehaviour
         {
             audioSource.PlayOneShot(mainEngine);
         }
+
         mainEngineParticles.Play();
     }
 }
