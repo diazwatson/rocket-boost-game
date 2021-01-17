@@ -59,7 +59,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0c298ab86b2714bf7b237b652992b81f, type: 2}
+  - {fileID: 2100000, guid: b5cefe1cb73ec462a94e541bd1da2f5f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -103,7 +103,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4256904256523269245}
   m_Layer: 0
-  m_Name: RocketShipOld
+  m_Name: Rocket1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
