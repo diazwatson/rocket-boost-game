@@ -2,7 +2,7 @@
 Mini game developed using Unity 
 
 ## Play Online
-- https://diazwatson.itch.io/
+- https://diazwatson.itch.io/rocket-boost
 
 ## Prerequisites
 - Unity ver. 2019.4.13 or higher
